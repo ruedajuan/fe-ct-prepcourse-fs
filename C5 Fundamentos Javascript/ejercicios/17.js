@@ -6,6 +6,16 @@ function esPositivo(num) {
   // Si el número es negativo ---> "Es negativo".
   // Si el número es 0, devuelve false.
   // Tu código:
+ var resultado;
+  if (num >0){
+    resultado = "Es positivo";
+    return resultado;
+  }
+  else if (num<0){
+    resultado = "Es negativo"
+    return resultado;
+  }
+  else return false;
 }
 
 module.exports = esPositivo;
