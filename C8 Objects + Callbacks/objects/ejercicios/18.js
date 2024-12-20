@@ -3,6 +3,16 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
   // Debes agregar el "nuevoAmigo" al final de este arreglo.
   // Retornar el objeto.
   // Tu código:
+    // Verifica si la propiedad 'amigos' existe y es un arreglo, sino crea uno vacío
+    if (!objetoUsuario.amigos) {
+      objetoUsuario.amigos = [];
+    }
+    
+    // Agrega el nuevo amigo al arreglo de amigos
+    objetoUsuario.amigos.push(nuevoAmigo);
+  
+    // Retorna el objeto actualizado
+    return objetoUsuario
 }
 
 module.exports = agregarAmigo;

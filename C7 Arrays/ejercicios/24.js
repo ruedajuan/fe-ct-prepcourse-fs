@@ -5,6 +5,22 @@ function continueStatement(num) {
   // se continúa con la siguiente iteración.
   // PISTA: Utiliza el statement 'continue'.
   // Tu código:
+  const resultados = [];
+  
+  // Iterar 10 veces
+  for (let i = 1; i <= 10; i++) {
+    // Si la iteración es 5, se salta ese caso
+    if (i === 5) {
+      continue;
+    }
+
+    // Incrementar num en 2 y guardar el resultado en el arreglo
+    num += 2;
+    resultados.push(num);
+  }
+
+  // Retornar el arreglo con los resultados
+  return resultados;
 }
 
 module.exports = continueStatement;

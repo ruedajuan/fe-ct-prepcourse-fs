@@ -4,6 +4,22 @@ function encontrarNumeroFaltante(numeros) {
   // y retórnalo.
   // Devuelve null si el array es vacío o si no hay números faltantes.
   // Tu código:
+
+  // Verificar si el array está vacío
+  if (numeros.length === 0) return null;
+
+  // Encontrar el rango mínimo y máximo en la secuencia
+  const min = Math.min(...numeros);
+  const max = Math.max(...numeros);
+
+  // Iterar desde el mínimo hasta el máximo y buscar el número faltante
+  for (let i = min; i <= max; i++) {
+    if (!numeros.includes(i)) {
+      return i; // Retornar el número faltante
+    }
+  }
+
+  return null; // Si no hay números faltantes
 }
 
 module.exports = encontrarNumeroFaltante;
